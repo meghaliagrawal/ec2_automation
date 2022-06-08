@@ -3,10 +3,8 @@ import time
 session = bt.session.Session(region_name="ap-south-1")
 print(session.region_name)
 ec2 = session.resource("ec2")
-
 """def create_key_pair():
     key_pair = ec2.create_key_pair(KeyName="DemoKeyPair2")"""
-
 count=0
 instances = ec2.instances.filter()
 for i in instances:
